@@ -1,0 +1,25 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: RATINGS-SERVICE
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    #    dialect: org.hibernate.dialect.MySQLDialect
+    url: jdbc:mysql://localhost:3306/ratings
+    username: root
+    password: root
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
